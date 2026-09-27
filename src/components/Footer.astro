@@ -1,0 +1,13 @@
+---
+import { site } from '../site.ts';
+const year = new Date().getFullYear();
+---
+<footer>
+  <div class="wrap footer-inner">
+    <span class="footer-copy">&copy; {year} {site.author}</span>
+    <div class="footer-links">
+      <a href={`mailto:${site.email}`}>Contact</a>
+      <a href={site.company} target="_blank" rel="noopener">Tarka Upskilling</a>
+    </div>
+  </div>
+</footer>

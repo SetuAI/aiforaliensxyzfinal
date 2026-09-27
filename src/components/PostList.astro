@@ -1,0 +1,19 @@
+---
+// Renders a list of blog entries. `posts` comes from getCollection('blog').
+const { posts } = Astro.props;
+
+const formatDate = (d) =>
+  d.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+---
+<div class="post-list">
+  {posts.map((post) => (
+    <a class="post-item" href={`/posts/${post.id}/`}>
+      <div class="post-meta">
+        <span class="post-date">{formatDate(post.data.pubDate)}</span>
+        <span class="post-tag">{post.data.tag}</span>
+      </div>
+      <div class="post-title">{post.data.title}</div>
+      <div class="post-excerpt">{post.data.excerpt}</div>
+    </a>
+  ))}
+</div>

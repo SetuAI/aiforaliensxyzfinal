@@ -1,0 +1,18 @@
+---
+import Icons from './Icons.astro';
+import { site } from '../site.ts';
+---
+<nav>
+  <div class="wrap nav-inner">
+    <a href="/" class="nav-wordmark">AI for Aliens</a>
+    <div class="nav-right">
+      <a href="/#about" class="nav-about">About</a>
+      <a href={site.github} class="nav-icon" target="_blank" rel="noopener" aria-label="GitHub">
+        <Icons name="github" />
+      </a>
+      <a href={site.youtube} class="nav-icon" target="_blank" rel="noopener" aria-label="YouTube">
+        <Icons name="youtube" />
+      </a>
+    </div>
+  </div>
+</nav>
